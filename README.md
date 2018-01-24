@@ -1,34 +1,16 @@
----
-title: "README"
-author: "Andrew"
-date: "24 January 2018"
-output: github_document
----
+README
+================
+Andrew
+24 January 2018
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+Divorce Data
+============
 
-library(tidyverse)
-library(RColorBrewer)
-
-source("Scripts/Clean.r")
-
-source("Scripts/Theme.r")
-
-
-
-
-```
-
-# Divorce Data
-
-This data was downloaded from [ONS](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce) and gives reasons for divorce in England and Wales in 2016. 
+This data was downloaded from [ONS](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce) and gives reasons for divorce in England and Wales in 2016.
 
 The first thing to notice is that this data isn't normalised. Looking the raw count data, it may seem that certain reasons for divorce, such as 'unreasonable behaviour, are on the decline. However, as the total number of divorces (and marriages) are decreasing, the normalised data shows that 'unreasonable behaviour' is a stable reason for divorce over time.
 
-
-```{r norm, fig.width = 12}
-
+``` r
 # Test of Normalisation  --------------------------------------------------
 
 
@@ -43,12 +25,14 @@ NormCheck <- DivorceByReason %>%
 NormCheck
 ```
 
-## A Nicer Plot
+![](README_files/figure-markdown_github/norm-1.png)
+
+A Nicer Plot
+------------
 
 Now that we know we need the normalised data we can make a nicer chart.
 
-```{r chart, fig.width = 9, fig.height = 7}
-
+``` r
 # Plot of Proportions -----------------------------------------------------
 
 
@@ -72,4 +56,4 @@ ReasonRate <- DivorceByReason %>%
 ReasonRate
 ```
 
-
+![](README_files/figure-markdown_github/chart-1.png)
