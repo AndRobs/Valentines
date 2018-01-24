@@ -1,10 +1,7 @@
-README
-================
-Andrew
-24 January 2018
-
 Divorce Data
-============
+================
+Andrew Robson
+24 January 2018
 
 This data was downloaded from [ONS](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/divorce) and gives reasons for divorce in England and Wales in 2016.
 
